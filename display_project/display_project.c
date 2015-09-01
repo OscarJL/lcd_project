@@ -8,6 +8,7 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
+#include "hd44780.h"
 
 
 int main(void)
@@ -17,7 +18,11 @@ int main(void)
 	DDRB = 0xFF;
 	DDRC = 0xFF;
 	
-	PORTD = 0;
+	lcd_init();
+	lcd_clrscr();
+	lcd_puts("Hello World");
+	
+	
     while(1)
     {
         _delay_ms(50);

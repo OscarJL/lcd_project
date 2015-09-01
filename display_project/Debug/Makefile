@@ -37,7 +37,9 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../display_project.c
+../CFile1.c \
+../display_project.c \
+../hd44780.c
 
 
 PREPROCESSING_SRCS += 
@@ -47,16 +49,24 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-display_project.o
+CFile1.o \
+display_project.o \
+hd44780.o
 
 OBJS_AS_ARGS +=  \
-display_project.o
+CFile1.o \
+display_project.o \
+hd44780.o
 
 C_DEPS +=  \
-display_project.d
+CFile1.d \
+display_project.d \
+hd44780.d
 
 C_DEPS_AS_ARGS +=  \
-display_project.d
+CFile1.d \
+display_project.d \
+hd44780.d
 
 OUTPUT_FILE_PATH +=display_project.elf
 
@@ -72,6 +82,10 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+
+
+
+
 
 
 
