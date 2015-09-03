@@ -25,7 +25,7 @@ int main(void)
 	
     while(1)
     {
-        _delay_ms(50);
-		PORTD += 1;
+        _delay_ms(100);
+		PORTD = 0;
     }
 }
